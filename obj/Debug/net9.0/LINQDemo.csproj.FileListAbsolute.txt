@@ -1,0 +1,14 @@
+D:\LINQDemo\bin\Debug\net9.0\LINQDemo.exe
+D:\LINQDemo\bin\Debug\net9.0\LINQDemo.deps.json
+D:\LINQDemo\bin\Debug\net9.0\LINQDemo.runtimeconfig.json
+D:\LINQDemo\bin\Debug\net9.0\LINQDemo.dll
+D:\LINQDemo\bin\Debug\net9.0\LINQDemo.pdb
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.AssemblyInfoInputs.cache
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.AssemblyInfo.cs
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.csproj.CoreCompileInputs.cache
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.dll
+D:\LINQDemo\obj\Debug\net9.0\refint\LINQDemo.dll
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.pdb
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.genruntimeconfig.cache
+D:\LINQDemo\obj\Debug\net9.0\ref\LINQDemo.dll
