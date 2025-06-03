@@ -12,3 +12,4 @@ D:\LINQDemo\obj\Debug\net9.0\refint\LINQDemo.dll
 D:\LINQDemo\obj\Debug\net9.0\LINQDemo.pdb
 D:\LINQDemo\obj\Debug\net9.0\LINQDemo.genruntimeconfig.cache
 D:\LINQDemo\obj\Debug\net9.0\ref\LINQDemo.dll
+D:\LINQDemo\obj\Debug\net9.0\LINQDemo.sourcelink.json
