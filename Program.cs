@@ -177,8 +177,15 @@ namespace LINQDemo
             System.Console.WriteLine("\n--------------------------------");
 
             // Distinct in LINQ
+            System.Console.WriteLine("Return the list with no duplicate value");
             System.Console.WriteLine("Distinct: ");
             products.SelectMany(p => p.Colors).Distinct().ToList().ForEach(c => System.Console.WriteLine(c));
+
+            // Single or SingleOrDefault
+            System.Console.WriteLine("\n--------------------------------");
+            System.Console.WriteLine("Single method in LINQ\nReturn when found a value and return error when not found");
+            var pInSingle = products.SingleOrDefault(p => p.Price == 1300);
+            System.Console.WriteLine(pInSingle);
         }
     }
 }
