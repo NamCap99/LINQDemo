@@ -162,6 +162,10 @@ namespace LINQDemo
 
             // Or we can code shoter like this
             products.Take(3).ToList().ForEach(p => System.Console.WriteLine(p));
+
+            // Skip
+            System.Console.WriteLine("Skip in LINQ");
+            products.Skip(2).ToList().ForEach(p => System.Console.WriteLine(p));
         }
     }
 }
