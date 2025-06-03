@@ -166,6 +166,11 @@ namespace LINQDemo
             // Skip
             System.Console.WriteLine("Skip in LINQ");
             products.Skip(2).ToList().ForEach(p => System.Console.WriteLine(p));
+
+            // Reverse
+            System.Console.WriteLine("Reserve: ");
+            int[] numbers = { 1, 2, 3, 4, 5, 6 };
+            numbers.Reverse().ToList().ForEach(n => System.Console.WriteLine(n));
         }
     }
 }
