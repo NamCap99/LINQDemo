@@ -109,7 +109,7 @@ namespace LINQDemo
 
             // Join
             System.Console.WriteLine("Join in LINQ");
-            var joinedProducts = products.Join(brands, p => p.Brand, b => b.ID, (p, b)
+            var joinedProducts = brands.Join(products, b => b.ID, p => p.Brand, (p, b)
                 =>
             {
                 return new
@@ -129,6 +129,27 @@ namespace LINQDemo
             // {
             //     System.Console.WriteLine(joinedProductsCount[item]);
             // }
+
+            // GroupJoin
+            System.Console.WriteLine("GroupJoin in LINQ");
+            var groupJoined = brands.GroupJoin(products, b => b.ID, p => p.Brand,
+            (bra, pro) =>
+            {
+                return new
+                {
+                    productName = bra.Name,
+                    AllBrand = pro
+                };
+            });
+
+            foreach (var gj in groupJoined)
+            {
+                System.Console.WriteLine(gj.productName);
+                foreach (var p in gj.AllBrand)
+                {
+                    System.Console.WriteLine(p);
+                }
+            }
 
         }
     }
