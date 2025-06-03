@@ -151,6 +151,17 @@ namespace LINQDemo
                 }
             }
 
+            // Take
+            System.Console.WriteLine("Take method in LINQ");
+            // var takeInLINQ = products.Take(3).ToList();
+
+            // foreach (var t in takeInLINQ)
+            // {
+            //     System.Console.WriteLine(t);
+            // }
+
+            // Or we can code shoter like this
+            products.Take(3).ToList().ForEach(p => System.Console.WriteLine(p));
         }
     }
 }
