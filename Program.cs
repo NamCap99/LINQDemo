@@ -186,6 +186,21 @@ namespace LINQDemo
             System.Console.WriteLine("Single method in LINQ\nReturn when found a value and return error when not found");
             var pInSingle = products.SingleOrDefault(p => p.Price == 1300);
             System.Console.WriteLine(pInSingle);
+            System.Console.WriteLine("\n--------------------------------");
+            // Any() method
+            System.Console.WriteLine("Any in LINQ\nReturn true when found and return false when not found the condition");
+            var anyInLinq = products.Any(p => p.Price == 300);
+            System.Console.WriteLine($"Return {anyInLinq} when found");
+
+            var anyInLinq2 = products.Any(p => p.Price == 1200);
+            System.Console.WriteLine($"Return {anyInLinq2} when not found");
+
+            System.Console.WriteLine("\n--------------------------------");
+            // Count() method
+            System.Console.WriteLine("Count() method in LINQ");
+            var countInLINQ = products.Count(p => p.Price >= 300);
+            System.Console.WriteLine($"Total = {countInLINQ}");
+
         }
     }
 }
