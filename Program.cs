@@ -30,7 +30,7 @@ namespace LINQDemo
             {
                 System.Console.WriteLine(product);
             }
-
+            System.Console.WriteLine("\n--------------------------------");
             // Select
             System.Console.WriteLine("Select in LINQ");
             // var result = products.Select(p => p.Name);
@@ -48,7 +48,7 @@ namespace LINQDemo
                 string colorsJoined = string.Join(", ", productName.Colors);
                 Console.WriteLine($"{productName.Name} – {productName.Price} – {colorsJoined}");
             }
-
+            System.Console.WriteLine("\n--------------------------------");
             // Where 
             System.Console.WriteLine("Where in LINQ");
             var result2 = products.Where(
@@ -64,7 +64,7 @@ namespace LINQDemo
             {
                 System.Console.WriteLine(product);
             }
-
+            System.Console.WriteLine("\n--------------------------------");
             System.Console.WriteLine("Select many in LINQ");
             // SelectMany
             var result3 = products.SelectMany(
@@ -77,6 +77,7 @@ namespace LINQDemo
             }
 
             //Min, Max, Sum, Average
+            System.Console.WriteLine("\n--------------------------------");
             System.Console.WriteLine("Min, Max, Sum, Average in LINQ");
             var minPrice = products.Min(products => products.Price);
             var maxPrice = products.Max(products => products.Price);
@@ -88,6 +89,7 @@ namespace LINQDemo
             Console.WriteLine($"Average Price: {averagePrice}");
 
             // GroupBy
+            System.Console.WriteLine("\n--------------------------------");
             System.Console.WriteLine("GroupBy in LINQ");
             var groupedProducts = products.GroupBy(
                 p => p.Brand,
@@ -106,7 +108,7 @@ namespace LINQDemo
                     Console.WriteLine($"  Product: {product.Name} - Price: {product.Price}");
                 }
             }
-
+            System.Console.WriteLine("\n--------------------------------");
             // Join
             System.Console.WriteLine("Join in LINQ");
             var joinedProducts = brands.Join(products, b => b.ID, p => p.Brand, (p, b)
@@ -129,7 +131,7 @@ namespace LINQDemo
             // {
             //     System.Console.WriteLine(joinedProductsCount[item]);
             // }
-
+            System.Console.WriteLine("\n--------------------------------");
             // GroupJoin
             System.Console.WriteLine("GroupJoin in LINQ");
             var groupJoined = brands.GroupJoin(products, b => b.ID, p => p.Brand,
@@ -150,7 +152,7 @@ namespace LINQDemo
                     System.Console.WriteLine(p);
                 }
             }
-
+            System.Console.WriteLine("\n--------------------------------");
             // Take
             System.Console.WriteLine("Take method in LINQ");
             // var takeInLINQ = products.Take(3).ToList();
@@ -162,15 +164,21 @@ namespace LINQDemo
 
             // Or we can code shoter like this
             products.Take(3).ToList().ForEach(p => System.Console.WriteLine(p));
-
+            System.Console.WriteLine("\n--------------------------------");
             // Skip
             System.Console.WriteLine("Skip in LINQ");
             products.Skip(2).ToList().ForEach(p => System.Console.WriteLine(p));
-
+            System.Console.WriteLine("\n--------------------------------");
             // Reverse
             System.Console.WriteLine("Reserve: ");
-            int[] numbers = { 1, 2, 3, 4, 5, 6 };
+            int[] numbers = { 1, 2, 3, 2, 5, 9, 10, 4, 5, 6 };
             numbers.Reverse().ToList().ForEach(n => System.Console.WriteLine(n));
+
+            System.Console.WriteLine("\n--------------------------------");
+
+            // Distinct in LINQ
+            System.Console.WriteLine("Distinct: ");
+            products.SelectMany(p => p.Colors).Distinct().ToList().ForEach(c => System.Console.WriteLine(c));
         }
     }
 }
